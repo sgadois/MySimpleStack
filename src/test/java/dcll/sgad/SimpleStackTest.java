@@ -37,6 +37,7 @@ public class SimpleStackTest {
         Assert.assertSame("The pushed item is on top of the stack", item, stack.peek());
     }
 
+
     @Test(expected = EmptyStackException.class)
     public void testPopOnEmptyStack()  throws EmptyStackException {
         // Setup the "state of the world"
@@ -45,6 +46,7 @@ public class SimpleStackTest {
         // Code under test
         stack.pop(); // should throws an EmptyStackException.
     }
+
 
     @Test
     public void testPop() throws EmptyStackException {

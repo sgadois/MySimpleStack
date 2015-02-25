@@ -34,8 +34,15 @@ public class MySimpleStack implements SimpleStack {
 
     @Override
     public Item pop() throws EmptyStackException {
+        if(stack.isEmpty())
+            throw new EmptyStackException();
         Item item = stack.get(stack.size() - 1);
         stack.remove(stack.size() - 1);
         return item;
+    }
+
+    @Override
+    public Item peekBot() throws EmptyStackException {
+        return stack.get(0);
     }
 }

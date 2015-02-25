@@ -34,4 +34,9 @@ public interface SimpleStack {
      * @throws EmptyStackException if this stack is empty.
      */
     public Item pop() throws EmptyStackException;
+
+    /**
+     * Look at the object at the bottom of the stack
+     */
+    public Item peekBot() throws EmptyStackException;
 }
